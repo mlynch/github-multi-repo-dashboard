@@ -2,25 +2,22 @@ import { Component } from '@stencil/core';
 
 
 @Component({
-  tag: 'app-home',
-  styleUrl: 'app-home.scss'
+  tag: 'github-repo',
+  styleUrl: 'github-repo.scss'
 })
-export class AppHome {
+export class GithubRepo {
 
   render() {
     return (
       <ion-page>
         <ion-header>
           <ion-toolbar color='primary'>
-            <ion-title>All Repos</ion-title>
+            <ion-title>Github Repo</ion-title>
           </ion-toolbar>
         </ion-header>
 
         <ion-content>
-          <h2>GitHub Multi-repo Dashboard</h2>
-          <p>
-            Select a repo in the menu on the left
-          </p>
+          <h2>Issues</h2>
         </ion-content>
       </ion-page>
     );

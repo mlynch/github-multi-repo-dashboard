@@ -3,11 +3,22 @@ import '@stencil/core';
 import { Component, Prop, Listen } from '@stencil/core';
 import { ToastController } from '@ionic/core';
 
+const apiUrl = 'https://github.com/graphql';
+
+const Lokka = require('lokka').Lokka;
+const Transport = require('lokka-transport-http').Transport;
+
+const client = new Lokka({
+  transport: new Transport(apiUrl)
+});
+
+console.log(client);
+
 @Component({
-  tag: 'my-app',
-  styleUrl: 'my-app.scss'
+  tag: 'github-dashboard',
+  styleUrl: 'github-dashboard.scss'
 })
-export class MyApp {
+export class GithubDashboard {
 
   @Prop({ connect: 'ion-toast-controller' }) toastCtrl: ToastController;
 
@@ -43,7 +54,7 @@ export class MyApp {
         <main>
           <ion-router useHash={false}>
             <ion-route url='/' component='app-home'></ion-route>
-            <ion-route url='/profile/:name' component='app-profile'></ion-route>
+            <ion-route url='/repo/:name' component='github-repo'></ion-route>
 
             <ion-nav></ion-nav>
           </ion-router>

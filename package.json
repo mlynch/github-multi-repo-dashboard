@@ -18,7 +18,11 @@
   "dependencies": {
     "@ionic/core": "^0.1.4",
     "@stencil/core": "0.7.7",
-    "@stencil/router": "latest"
+    "@stencil/router": "latest",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.8.0",
+    "lokka": "^1.7.0",
+    "lokka-transport-http": "^1.6.1"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",

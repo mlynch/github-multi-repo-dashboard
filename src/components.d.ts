@@ -58,27 +58,54 @@ declare global {
 
 
 declare global {
-  interface HTMLAppProfileElement extends HTMLStencilElement {
-    'name': string;
+  interface HTMLGithubDashboardElement extends HTMLStencilElement {
+
   }
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
+  var HTMLGithubDashboardElement: {
+    prototype: HTMLGithubDashboardElement;
+    new (): HTMLGithubDashboardElement;
   };
   interface HTMLElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
+    'github-dashboard': HTMLGithubDashboardElement;
   }
   interface ElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
+    'github-dashboard': HTMLGithubDashboardElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'app-profile': JSXElements.AppProfileAttributes;
+      'github-dashboard': JSXElements.GithubDashboardAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppProfileAttributes extends HTMLAttributes {
-      'name'?: string;
+    export interface GithubDashboardAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLGithubRepoElement extends HTMLStencilElement {
+
+  }
+  var HTMLGithubRepoElement: {
+    prototype: HTMLGithubRepoElement;
+    new (): HTMLGithubRepoElement;
+  };
+  interface HTMLElementTagNameMap {
+    'github-repo': HTMLGithubRepoElement;
+  }
+  interface ElementTagNameMap {
+    'github-repo': HTMLGithubRepoElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'github-repo': JSXElements.GithubRepoAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface GithubRepoAttributes extends HTMLAttributes {
+
     }
   }
 }
@@ -111,33 +138,6 @@ declare global {
       'onLazyImgloaded'?: (event: CustomEvent<HTMLImageElement>) => void;
       'src'?: string;
       'width'?: number;
-    }
-  }
-}
-
-
-declare global {
-  interface HTMLMyAppElement extends HTMLStencilElement {
-
-  }
-  var HTMLMyAppElement: {
-    prototype: HTMLMyAppElement;
-    new (): HTMLMyAppElement;
-  };
-  interface HTMLElementTagNameMap {
-    'my-app': HTMLMyAppElement;
-  }
-  interface ElementTagNameMap {
-    'my-app': HTMLMyAppElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      'my-app': JSXElements.MyAppAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface MyAppAttributes extends HTMLAttributes {
-
     }
   }
 }
